@@ -7,10 +7,10 @@ import SlidePage3 from "./slide3";
 import SlidePage4 from "./slide4";
 
 const slides = [
-  { id: 0, component: SlidePage1 },
-  { id: 1, component: SlidePage2 },
-  { id: 2, component: SlidePage3 },
-  { id: 3, component: SlidePage4 },
+    { id: 0, component: SlidePage1 },
+    { id: 1, component: SlidePage2 },
+    { id: 2, component: SlidePage3 },
+    { id: 3, component: SlidePage4 },
 ];
 
 export default function Context() {
@@ -49,14 +49,14 @@ export default function Context() {
             transition: { duration: 0.6 },
         }),
         in: {
-            x: 0, // Center on the screen horizontally
+            x: 0,
             transition: {
                 duration: 0.6,
                 ease: [0.4, 0.0, 0.2, 1],
             },
         },
         out: (direction: number) => ({
-            x: direction < 0 ? "100%" : "-100%", // Move horizontally
+            x: direction < 0 ? "100%" : "-100%",
             transition: {
                 duration: 0.6,
                 ease: [0.4, 0.0, 0.2, 1],
@@ -65,9 +65,16 @@ export default function Context() {
     };
 
     return (
-        <div className="relative w-[200vw] h-screen overflow-hidden">
+        <section
+            id="context"
+            className="relative w-[200vw] h-screen overflow-hidden"
+        >
             <div className="sticky top-0 w-full h-full">
-                <AnimatePresence initial={false} custom={direction}>
+                <AnimatePresence
+                    key={"context"}
+                    initial={false}
+                    custom={direction}
+                >
                     {slides.map(
                         (slide, index) =>
                             currentSlide === index && (
@@ -86,6 +93,6 @@ export default function Context() {
                     )}
                 </AnimatePresence>
             </div>
-        </div>
+        </section>
     );
 }

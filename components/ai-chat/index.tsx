@@ -8,9 +8,7 @@ const prompts = [
     "Đã có một nền hòa bình bị bỏ lỡ phải không, và đáng ra Việt Nam có thể độc lập từ 1945 mà không cần kháng chiến chống Pháp",
 ];
 
-const apiKey = "AIzaSyBexzItj3oU66WPOL0DTBGJD56Wnunk7kk";
-
-const genAI = new GoogleGenerativeAI(apiKey);
+const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_API_KEY as string);
 
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 export const AIChat = () => {
