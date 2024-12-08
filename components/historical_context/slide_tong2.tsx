@@ -1,16 +1,14 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
-import SlidePage1 from "./slide1";
-import SlidePage2 from "./slide2";
-import SlidePage3 from "./slide3";
-import SlidePage4 from "./slide4";
+import SlidePage5 from "./slide5";
+import SlidePage6 from "./slide6";
+import SlidePage7 from "./slide7";
 
 const slides = [
-  { id: 0, component: SlidePage1 },
-  { id: 1, component: SlidePage2 },
-  { id: 2, component: SlidePage3 },
-  { id: 3, component: SlidePage4 },
+  { id: 0, component: SlidePage5 },
+  { id: 1, component: SlidePage6 },
+  { id: 2, component: SlidePage7 },
 ];
 
 export default function Home() {

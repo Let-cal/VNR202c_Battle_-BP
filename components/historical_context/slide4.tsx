@@ -17,7 +17,26 @@ export default function SlidePage4() {
           priority
         />
       </div>
+      {/* Main Title */}
+      <div className="absolute top-3 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center space-y-2 w-full">
+        <div className="flex items-center justify-center w-full">
+          <div className="text-5xl font-bold  text-yellow-500 text-right relative w-[50%] pr-2 font-sans">
+            BỐI CẢNH
+            <span
+              className="block mt-1 h-1 bg-black absolute right-0"
+              style={{ width: "20%" }}
+            ></span>
+          </div>
 
+          <div className="text-5xl font-bold  text-left  text-black relative w-[50%] pl-2 font-sans">
+            LỊCH SỬ
+            <span
+              className="block mt-1 h-1 bg-yellow-500 absolute left-0"
+              style={{ width: "20%" }}
+            ></span>
+          </div>
+        </div>
+      </div>
       <div className="relative z-10 flex h-full">
         {/* Left side: Background image */}
         <div className="w-1/2 h-full relative">
