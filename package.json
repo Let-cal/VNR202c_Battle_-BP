@@ -14,7 +14,9 @@
     "lenis": "^1.1.18",
     "next": "14.2.20",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "swiper": "^11.1.15",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@types/node": "^20",
