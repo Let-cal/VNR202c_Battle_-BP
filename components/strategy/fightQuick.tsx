@@ -1,7 +1,7 @@
 "use client";
 import BackgroundImage from "@/assets/battles/doan1.jpg";
 
-export const FightQuick = () => {
+export default function FightQuick() {
   return (
     <div
       className="w-full h-screen bg-cover bg-center flex flex-col p-10 space-y-2 justify-center"
@@ -27,4 +27,4 @@ export const FightQuick = () => {
       </div>
     </div>
   );
-};
+}

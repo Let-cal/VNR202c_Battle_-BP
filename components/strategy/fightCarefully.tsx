@@ -1,7 +1,7 @@
 "use client";
 import BackgroundImage from "@/assets/battles/12ly7.jpg";
 
-export const FightCarefully = () => {
+export default function FightCarefully() {
   return (
     <div
       className="w-full h-screen bg-cover bg-center flex flex-col p-10 space-y-2 justify-center"
@@ -31,4 +31,4 @@ export const FightCarefully = () => {
       </div>
     </div>
   );
-};
+}

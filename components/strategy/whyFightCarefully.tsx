@@ -2,7 +2,7 @@
 
 import BackgroundImage from "@/assets/battles/whyfightcare.jpg";
 
-export const WhyFightCareFully = () => {
+export default function WhyFightCareFully() {
   return (
     <div
       className="w-full h-screen bg-cover bg-center flex flex-col p-10 space-y-2 justify-center"
@@ -54,4 +54,4 @@ export const WhyFightCareFully = () => {
       </div>
     </div>
   );
-};
+}

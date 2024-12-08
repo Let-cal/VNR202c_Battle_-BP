@@ -24,7 +24,7 @@ const strategies: STATERGY[] = [
   },
 ];
 
-export const ArmyArt = () => {
+export default function ArmyArt() {
   return (
     <div
       className="w-full h-screen bg-cover bg-center flex flex-col p-10 space-y-2 justify-center"
@@ -59,4 +59,4 @@ export const ArmyArt = () => {
       </div>
     </div>
   );
-};
+}
