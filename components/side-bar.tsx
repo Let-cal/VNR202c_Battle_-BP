@@ -22,6 +22,10 @@ const tabs = [
         value: "Tổng kết",
     },
     {
+        name: "hero",
+        value: "Lãnh đạo",
+    },
+    {
         name: "question",
         value: "Hỏi đáp",
     },
@@ -29,10 +33,19 @@ const tabs = [
 
 export const SideBar = () => {
     const [activeTab, setActiveTab] = useState("");
+
     useEffect(() => {
         const updateActiveTab = () => {
             const currentHash = window.location.hash.replace("#", "");
             setActiveTab(currentHash || "context");
+
+            const targetElement = document.getElementById(currentHash);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: "smooth",
+                });
+            }
         };
 
         updateActiveTab();
@@ -42,6 +55,8 @@ export const SideBar = () => {
             window.removeEventListener("hashchange", updateActiveTab);
         };
     }, []);
+
+    // useLenis();
 
     return (
         <div className=" h-[95%] fixed left-5 w-14 bg-zinc-800 transform -translate-y-1/2 top-1/2 rounded-lg py-10 flex flex-col justify-between items-center">
@@ -59,7 +74,18 @@ export const SideBar = () => {
                             "[writing-mode:vertical-lr] rotate-180 whitespace-nowrap text-sm font-bold text-white border-l-2 hover:border-l-[#BC6A34] border-l-zinc-800 cursor-pointer transition-all duration-150 ease-in-out",
                             activeTab === tab.name && "border-l-[#BC6A34]"
                         )}
-                        onClick={() => (window.location.hash = tab.name)}
+                        onClick={() => {
+                            window.location.hash = tab.name;
+                            const targetElement = document.getElementById(
+                                tab.name
+                            );
+                            if (targetElement) {
+                                window.scrollTo({
+                                    top: targetElement.offsetTop,
+                                    behavior: "smooth",
+                                });
+                            }
+                        }}
                     >
                         {tab.value}
                     </div>
