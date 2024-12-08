@@ -29,8 +29,8 @@ function MainLayout({ children }: MainLayoutProps) {
     }, []);
     return (
         <>
-            <div className="w-screen h-full relative">
-                {isLoading ? <Reloading /> : null}
+            {isLoading ? <Reloading /> : null}
+            <div className="w-screen ">
                 {children}
                 <SideBar />
             </div>
